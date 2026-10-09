@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart - ShopEasy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Shopping Cart</h1></header>
+
+    <main>
+        <h2>Your Cart</h2>
+        <p>Wireless Headphones — Rs. 3,500</p>
+        <p>Smart Watch — Rs. 4,500</p>
+        <h3>Total: Rs. 8,000</h3>
+        <button onclick="alert('Demo checkout successful!')">
+            Checkout
+        </button>
+    </main>
+</body>
+</html>
+5. script.js — JavaScript functionality
+javascript
+
+const products = [
+    { id: 1, name: "Wireless Headphones", price: 3500 },
+    { id: 2, name: "Smart Watch", price: 4500 },
+    { id: 3, name: "Running Shoes", price: 2800 },
+    { id: 4, name: "Travel Backpack", price: 2200 },
+    { id: 5, name: "Coffee Mug", price: 500 }
+];
+
+function displayProducts() {
+    products.forEach(product => {
+        console.log(
+            product.id,
+            product.name,
+            "Rs. " + product.price
+        );
+    });
+}
+
+displayProducts();
